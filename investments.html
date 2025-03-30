@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investments - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/investments.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Investments</h1>
+        <div class="header-actions">
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus-circle"></i>
+            Add Investment
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <!-- Portfolio Summary -->
+        <div class="portfolio-summary animate-fade-in">
+          <div class="summary-card">
+            <div class="summary-header">
+              <h2>Portfolio Value</h2>
+              <div class="time-period">
+                <select>
+                  <option>All Time</option>
+                  <option>This Year</option>
+                  <option>This Month</option>
+                </select>
+              </div>
+            </div>
+            <div class="summary-content">
+              <div class="portfolio-value">
+                <div class="current-value">₹8,45,250</div>
+                <div class="value-change positive">
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span>₹32,450 (3.9%)</span>
+                </div>
+              </div>
+              <div class="chart-placeholder">
+                <div class="line-chart">
+                  <div class="chart-line"></div>
+                  <div class="chart-point" style="left: 0%; bottom: 20%;"></div>
+                  <div class="chart-point" style="left: 20%; bottom: 40%;"></div>
+                  <div class="chart-point" style="left: 40%; bottom: 30%;"></div>
+                  <div class="chart-point" style="left: 60%; bottom: 50%;"></div>
+                  <div class="chart-point" style="left: 80%; bottom: 45%;"></div>
+                  <div class="chart-point" style="left: 100%; bottom: 60%;"></div>
+                </div>
+                <div class="chart-labels">
+                  <span>Jan</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Apr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investment Categories -->
+        <div class="investment-categories animate-fade-in">
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="category-content">
+              <h3>Mutual Funds</h3>
+              <div class="category-value">₹3,25,000</div>
+              <div class="category-change positive">+5.2%</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 38%;"></div>
+              </div>
+              <div class="category-allocation">38% of portfolio</div>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="category-content">
+              <h3>Stocks</h3>
+              <div class="category-value">₹2,50,000</div>
+              <div class="category-change positive">+7.8%</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%;"></div>
+              </div>
+              <div class="category-allocation">30% of portfolio</div>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="category-content">
+              <h3>Fixed Deposits</h3>
+              <div class="category-value">₹1,50,000</div>
+              <div class="category-change positive">+2.5%</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 18%;"></div>
+              </div>
+              <div class="category-allocation">18% of portfolio</div>
+            </div>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div class="category-content">
+              <h3>Government Bonds</h3>
+              <div class="category-value">₹1,20,250</div>
+              <div class="category-change positive">+1.8%</div>
+              <div class="progress-bar">
+                <div class="progress" style="width: 14%;"></div>
+              </div>
+              <div class="category-allocation">14% of portfolio</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investment List -->
+        <div class="section-header animate-fade-in">
+          <h2>Your Investments</h2>
+          <div class="section-actions">
+            <div class="search-box">
+              <i class="fa-solid fa-search"></i>
+              <input type="text" placeholder="Search investments...">
+            </div>
+            <select class="filter-select">
+              <option>All Categories</option>
+              <option>Mutual Funds</option>
+              <option>Stocks</option>
+              <option>Fixed Deposits</option>
+              <option>Government Bonds</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="investments-table animate-fade-in">
+          <div class="table-header">
+            <div class="header-cell">Name</div>
+            <div class="header-cell">Category</div>
+            <div class="header-cell">Value</div>
+            <div class="header-cell">Returns</div>
+            <div class="header-cell">Actions</div>
+          </div>
+          <div class="table-body">
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.1s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">HDFC Midcap Opportunities Fund</div>
+                  <div class="date">Invested: 15 Jan 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Mutual Funds</div>
+              <div class="cell investment-value">₹1,25,000</div>
+              <div class="cell investment-returns positive">+8.5%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.2s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">Reliance Large Cap Fund</div>
+                  <div class="date">Invested: 05 Mar 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Mutual Funds</div>
+              <div class="cell investment-value">₹1,00,000</div>
+              <div class="cell investment-returns positive">+6.2%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.3s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">Axis Small Cap Fund</div>
+                  <div class="date">Invested: 22 Feb 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Mutual Funds</div>
+              <div class="cell investment-value">₹1,00,000</div>
+              <div class="cell investment-returns positive">+4.8%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.4s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">Tata Motors Ltd.</div>
+                  <div class="date">Invested: 10 Apr 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Stocks</div>
+              <div class="cell investment-value">₹75,000</div>
+              <div class="cell investment-returns positive">+12.5%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.5s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">Infosys Ltd.</div>
+                  <div class="date">Invested: 18 Jan 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Stocks</div>
+              <div class="cell investment-value">₹1,00,000</div>
+              <div class="cell investment-returns positive">+5.8%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.6s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">HDFC Bank Ltd.</div>
+                  <div class="date">Invested: 05 Feb 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Stocks</div>
+              <div class="cell investment-value">₹75,000</div>
+              <div class="cell investment-returns positive">+7.2%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.7s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-coins"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">HDFC Bank FD</div>
+                  <div class="date">Invested: 12 Mar 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Fixed Deposits</div>
+              <div class="cell investment-value">₹1,50,000</div>
+              <div class="cell investment-returns positive">+2.5%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+            <div class="table-row animate-slide-in-up" style="animation-delay: 0.8s;">
+              <div class="cell investment-name">
+                <div class="investment-icon">
+                  <i class="fa-solid fa-landmark"></i>
+                </div>
+                <div class="investment-details">
+                  <div class="name">Government of India Bonds</div>
+                  <div class="date">Invested: 20 Jan 2023</div>
+                </div>
+              </div>
+              <div class="cell investment-category">Government Bonds</div>
+              <div class="cell investment-value">₹1,20,250</div>
+              <div class="cell investment-returns positive">+1.8%</div>
+              <div class="cell investment-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investment Recommendations -->
+        <div class="section-header animate-fade-in">
+          <h2>Recommended Investments</h2>
+          <p>Based on your risk profile and investment goals</p>
+        </div>
+
+        <div class="recommendations-grid animate-fade-in">
+          <div class="recommendation-card animate-pop-in" style="animation-delay: 0.1s;">
+            <div class="recommendation-header">
+              <div class="recommendation-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="recommendation-tag">Mutual Fund</div>
+            </div>
+            <div class="recommendation-content">
+              <h3>ICICI Prudential Technology Fund</h3>
+              <div class="recommendation-stats">
+                <div class="stat">
+                  <div class="stat-label">3Y Returns</div>
+                  <div class="stat-value positive">+18.5%</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Risk Level</div>
+                  <div class="stat-value">Moderate</div>
+                </div>
+              </div>
+              <div class="recommendation-description">
+                A technology sector focused fund with consistent performance over the last 3 years.
+              </div>
+              <button class="btn btn-primary btn-block">Invest Now</button>
+            </div>
+          </div>
+
+          <div class="recommendation-card animate-pop-in" style="animation-delay: 0.2s;">
+            <div class="recommendation-header">
+              <div class="recommendation-icon">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <div class="recommendation-tag">Stock</div>
+            </div>
+            <div class="recommendation-content">
+              <h3>Reliance Industries Ltd.</h3>
+              <div class="recommendation-stats">
+                <div class="stat">
+                  <div class="stat-label">1Y Returns</div>
+                  <div class="stat-value positive">+15.2%</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Risk Level</div>
+                  <div class="stat-value">Moderate</div>
+                </div>
+              </div>
+              <div class="recommendation-description">
+                A blue-chip stock with strong fundamentals and growth potential in multiple sectors.
+              </div>
+              <button class="btn btn-primary btn-block">Invest Now</button>
+            </div>
+          </div>
+
+          <div class="recommendation-card animate-pop-in" style="animation-delay: 0.3s;">
+            <div class="recommendation-header">
+              <div class="recommendation-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="recommendation-tag">ETF</div>
+            </div>
+            <div class="recommendation-content">
+              <h3>Nippon India Nifty 50 ETF</h3>
+              <div class="recommendation-stats">
+                <div class="stat">
+                  <div class="stat-label">3Y Returns</div>
+                  <div class="stat-value positive">+12.8%</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Risk Level</div>
+                  <div class="stat-value">Low</div>
+                </div>
+              </div>
+              <div class="recommendation-description">
+                A low-cost index fund that tracks the Nifty 50, ideal for long-term investors.
+              </div>
+              <button class="btn btn-primary btn-block">Invest Now</button>
+            </div>
+          </div>
+
+          <div class="recommendation-card animate-pop-in" style="animation-delay: 0.4s;">
+            <div class="recommendation-header">
+              <div class="recommendation-icon">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div class="recommendation-tag">Fixed Deposit</div>
+            </div>
+            <div class="recommendation-content">
+              <h3>SBI Special Term Deposit</h3>
+              <div class="recommendation-stats">
+                <div class="stat">
+                  <div class="stat-label">Interest Rate</div>
+                  <div class="stat-value positive">7.1%</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-label">Risk Level</div>
+                  <div class="stat-value">Very Low</div>
+                </div>
+              </div>
+              <div class="recommendation-description">
+                A secure investment option with guaranteed returns and flexible tenure options.
+              </div>
+              <button class="btn btn-primary btn-block">Invest Now</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/investments.js"></script>
+</body>
+</html>
+

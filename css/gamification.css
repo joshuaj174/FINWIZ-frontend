@@ -1,0 +1,625 @@
+/* Gamification Page Styles */
+
+/* User Progress */
+.user-progress {
+  margin-bottom: 2rem;
+}
+
+.progress-card {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.level-badge {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.progress-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+}
+
+.stat-item i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Section Headers */
+.section-header {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-header p {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Rewards Grid */
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.reward-card {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reward-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reward-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reward-icon i {
+  font-size: 1.5rem;
+}
+
+.reward-content {
+  flex: 1;
+}
+
+.reward-content h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.reward-content p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.reward-progress {
+  margin-bottom: 0.75rem;
+}
+
+.reward-progress span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.reward-points {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Badges */
+.badges-container {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+.badge.earned {
+  background-color: var(--primary);
+  color: white;
+}
+
+.badge i {
+  font-size: 1.25rem;
+}
+
+/* Challenges */
+.challenges-container {
+  margin-bottom: 2rem;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.challenge-card {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-header h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.challenge-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--muted);
+}
+
+.challenge-badge.success {
+  background-color: var(--success);
+  color: white;
+}
+
+.challenge-card p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.challenge-progress {
+  margin-bottom: 1rem;
+}
+
+.challenge-progress span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.challenge-participants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participant-avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--muted);
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -0.5rem;
+  border: 2px solid var(--background);
+}
+
+.avatar.more {
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Completed Challenges */
+.challenge-card.completed {
+  border-left: 4px solid var(--success);
+}
+
+.challenge-result {
+  margin-bottom: 1rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.result-label {
+  color: var(--muted-foreground);
+}
+
+.result-value {
+  font-weight: 600;
+}
+
+/* Leaderboard */
+.leaderboard-container {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.leaderboard-header h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.leaderboard-filter select {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  font-size: 0.875rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.leaderboard-row.header {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.leaderboard-row.highlight {
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.leaderboard-row .user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.badge.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.badge.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+/* Quests */
+.quests-container {
+  margin-bottom: 2rem;
+}
+
+.quest-card {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quest-card.active {
+  border-left: 4px solid var(--primary);
+}
+
+.quest-card.locked {
+  opacity: 0.7;
+}
+
+.quest-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quest-card.locked .quest-icon {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.quest-icon i {
+  font-size: 1.5rem;
+}
+
+.quest-content {
+  flex: 1;
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.quest-header h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.quest-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.quest-badge.locked {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.quest-content p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.quest-progress {
+  margin-bottom: 0.75rem;
+}
+
+.quest-progress span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.quest-unlock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.quest-rewards {
+  display: flex;
+  gap: 1rem;
+}
+
+.reward-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.reward-item i {
+  color: var(--primary);
+}
+
+/* Perks */
+.perks-container {
+  margin-bottom: 2rem;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.perk-card {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perk-card.locked {
+  opacity: 0.7;
+}
+
+.perk-image {
+  height: 8rem;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perk-image i {
+  font-size: 3rem;
+}
+
+.perk-content {
+  padding: 1.5rem;
+}
+
+.perk-content h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.perk-content p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.perk-cost {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.perk-cost i {
+  color: var(--primary);
+}
+
+/* User Points in Header */
+.user-points {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--muted);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.user-points i {
+  color: var(--primary);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .challenges-grid,
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+    font-size: 0.875rem;
+  }
+}
+

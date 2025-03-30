@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/community.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link active">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Community</h1>
+        <div class="header-actions">
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus-circle"></i>
+            Create Post
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="community-layout">
+          <!-- Main Content -->
+          <div class="community-main">
+            <!-- Filters -->
+            <div class="post-filters animate-fade-in">
+              <div class="filter-tabs">
+                <button class="filter-tab active">Popular</button>
+                <button class="filter-tab">Recent</button>
+                <button class="filter-tab">Following</button>
+                <button class="filter-tab">My Posts</button>
+              </div>
+              <div class="filter-actions">
+                <div class="search-box">
+                  <i class="fa-solid fa-search"></i>
+                  <input type="text" placeholder="Search discussions...">
+                </div>
+                <select class="category-filter">
+                  <option value="">All Categories</option>
+                  <option value="investing">Investing</option>
+                  <option value="budgeting">Budgeting</option>
+                  <option value="saving">Saving</option>
+                  <option value="debt">Debt Management</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Posts -->
+            <div class="posts-container">
+              <div class="post-card animate-slide-in-up" style="animation-delay: 0.1s;">
+                <div class="post-header">
+                  <div class="post-author">
+                    <div class="author-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                      <div class="author-name">Sarah Johnson</div>
+                      <div class="post-meta">
+                        <span class="post-time">2 hours ago</span>
+                        <span class="post-category">Investing</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-actions">
+                    <button class="post-action">
+                      <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="post-action">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">Best Credit Cards for Students in 2025</h3>
+                  <p class="post-excerpt">I've been researching credit cards for students and wanted to share my findings. Here are the top 5 cards with the best rewards and lowest fees...</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-stats">
+                    <div class="stat">
+                      <i class="fa-solid fa-thumbs-up"></i>
+                      <span>42</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-comment"></i>
+                      <span>28</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-eye"></i>
+                      <span>156</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-outline">Read More</button>
+                </div>
+              </div>
+
+              <div class="post-card animate-slide-in-up" style="animation-delay: 0.2s;">
+                <div class="post-header">
+                  <div class="post-author">
+                    <div class="author-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                      <div class="author-name">Michael Chen</div>
+                      <div class="post-meta">
+                        <span class="post-time">Yesterday</span>
+                        <span class="post-category">Budgeting</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-actions">
+                    <button class="post-action">
+                      <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="post-action">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">How I Saved ₹50,000 in 6 Months Using the 50/30/20 Rule</h3>
+                  <p class="post-excerpt">I wanted to share my success story with the 50/30/20 budgeting method. Six months ago, I was struggling to save anything, but after implementing this strategy...</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-stats">
+                    <div class="stat">
+                      <i class="fa-solid fa-thumbs-up"></i>
+                      <span>87</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-comment"></i>
+                      <span>35</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-eye"></i>
+                      <span>243</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-outline">Read More</button>
+                </div>
+              </div>
+
+              <div class="post-card animate-slide-in-up" style="animation-delay: 0.3s;">
+                <div class="post-header">
+                  <div class="post-author">
+                    <div class="author-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                      <div class="author-name">Priya Sharma</div>
+                      <div class="post-meta">
+                        <span class="post-time">3 days ago</span>
+                        <span class="post-category">Investing</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-actions">
+                    <button class="post-action">
+                      <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="post-action">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">Tips for First-Time Investors in the Stock Market</h3>
+                  <p class="post-excerpt">Starting your investment journey can be intimidating. Here are 10 practical tips I wish someone had told me when I first started investing in stocks...</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-stats">
+                    <div class="stat">
+                      <i class="fa-solid fa-thumbs-up"></i>
+                      <span>65</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-comment"></i>
+                      <span>19</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-eye"></i>
+                      <span>198</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-outline">Read More</button>
+                </div>
+              </div>
+
+              <div class="post-card animate-slide-in-up" style="animation-delay: 0.4s;">
+                <div class="post-header">
+                  <div class="post-author">
+                    <div class="author-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                      <div class="author-name">Raj Patel</div>
+                      <div class="post-meta">
+                        <span class="post-time">1 week ago</span>
+                        <span class="post-category">Debt Management</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-actions">
+                    <button class="post-action">
+                      <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="post-action">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="post-content">
+                  <h3 class="post-title">How I Paid Off ₹2 Lakhs of Debt in One Year</h3>
+                  <p class="post-excerpt">Last year, I was drowning in debt with no clear path forward. Today, I'm debt-free and want to share the exact strategy I used to eliminate my debt...</p>
+                </div>
+                <div class="post-footer">
+                  <div class="post-stats">
+                    <div class="stat">
+                      <i class="fa-solid fa-thumbs-up"></i>
+                      <span>112</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-comment"></i>
+                      <span>47</span>
+                    </div>
+                    <div class="stat">
+                      <i class="fa-solid fa-eye"></i>
+                      <span>325</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-outline">Read More</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination animate-fade-in">
+              <button class="pagination-btn disabled">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="pagination-btn active">1</button>
+              <button class="pagination-btn">2</button>
+              <button class="pagination-btn">3</button>
+              <span class="pagination-ellipsis">...</span>
+              <button class="pagination-btn">10</button>
+              <button class="pagination-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="community-sidebar">
+            <!-- Trending Topics -->
+            <div class="sidebar-card animate-slide-in-right">
+              <div class="sidebar-card-header">
+                <h3>Trending Topics</h3>
+              </div>
+              <div class="sidebar-card-content">
+                <div class="trending-topics">
+                  <div class="trending-topic">
+                    <div class="topic-rank">#1</div>
+                    <div class="topic-content">
+                      <div class="topic-title">Cryptocurrency Investments</div>
+                      <div class="topic-stats">
+                        <span>128 posts</span>
+                        <span>•</span>
+                        <span>542 comments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-topic">
+                    <div class="topic-rank">#2</div>
+                    <div class="topic-content">
+                      <div class="topic-title">Emergency Fund Strategies</div>
+                      <div class="topic-stats">
+                        <span>95 posts</span>
+                        <span>•</span>
+                        <span>387 comments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-topic">
+                    <div class="topic-rank">#3</div>
+                    <div class="topic-content">
+                      <div class="topic-title">Mutual Funds vs. ETFs</div>
+                      <div class="topic-stats">
+                        <span>82 posts</span>
+                        <span>•</span>
+                        <span>315 comments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-topic">
+                    <div class="topic-rank">#4</div>
+                    <div class="topic-content">
+                      <div class="topic-title">Home Loan Interest Rates</div>
+                      <div class="topic-stats">
+                        <span>76 posts</span>
+                        <span>•</span>
+                        <span>294 comments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-topic">
+                    <div class="topic-rank">#5</div>
+                    <div class="topic-content">
+                      <div class="topic-title">Tax-Saving Investments</div>
+                      <div class="topic-stats">
+                        <span>68 posts</span>
+                        <span>•</span>
+                        <span>256 comments</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Contributors -->
+            <div class="sidebar-card animate-slide-in-right">
+              <div class="sidebar-card-header">
+                <h3>Top Contributors</h3>
+              </div>
+              <div class="sidebar-card-content">
+                <div class="top-contributors">
+                  <div class="contributor">
+                    <div class="contributor-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="contributor-info">
+                      <div class="contributor-name">Priya Sharma</div>
+                      <div class="contributor-stats">
+                        <span>Financial Advisor</span>
+                        <span>•</span>
+                        <span>142 posts</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">Follow</button>
+                  </div>
+                  <div class="contributor">
+                    <div class="contributor-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="contributor-info">
+                      <div class="contributor-name">Raj Patel</div>
+                      <div class="contributor-stats">
+                        <span>Investment Analyst</span>
+                        <span>•</span>
+                        <span>118 posts</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">Follow</button>
+                  </div>
+                  <div class="contributor">
+                    <div class="contributor-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="contributor-info">
+                      <div class="contributor-name">Sarah Johnson</div>
+                      <div class="contributor-stats">
+                        <span>Budget Expert</span>
+                        <span>•</span>
+                        <span>95 posts</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-card-footer">
+                <button class="btn btn-sm btn-outline btn-block">View All Contributors</button>
+              </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="sidebar-card animate-slide-in-right">
+              <div class="sidebar-card-header">
+                <h3>Upcoming Events</h3>
+              </div>
+              <div class="sidebar-card-content">
+                <div class="events-list">
+                  <div class="event-item">
+                    <div class="event-date">
+                      <div class="event-month">APR</div>
+                      <div class="event-day">15</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Investing for Beginners Webinar</div>
+                      <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 7:00 PM</span>
+                        <span><i class="fa-solid fa-video"></i> Online</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">
+                      <div class="event-month">APR</div>
+                      <div class="event-day">22</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Tax Planning Workshop</div>
+                      <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 6:30 PM</span>
+                        <span><i class="fa-solid fa-video"></i> Online</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event-item">
+                    <div class="event-date">
+                      <div class="event-month">MAY</div>
+                      <div class="event-day">05</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Retirement Planning Seminar</div>
+                      <div class="event-meta">
+                        <span><i class="fa-solid fa-clock"></i> 5:00 PM</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-card-footer">
+                <button class="btn btn-sm btn-outline btn-block">View All Events</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/community.js"></script>
+</body>
+</html>
+

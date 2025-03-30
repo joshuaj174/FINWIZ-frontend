@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamification - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/gamification.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link active">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Gamification</h1>
+        <div class="header-actions">
+          <div class="user-points">
+            <i class="fa-solid fa-star"></i>
+            <span>1,250 Points</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <!-- User Progress Overview -->
+        <div class="user-progress animate-fade-in">
+          <div class="progress-card">
+            <div class="progress-header">
+              <h2>Your Financial Journey</h2>
+              <div class="level-badge">Level 8</div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+              </div>
+              <div class="progress-info">
+                <span>750/1000 XP to Level 9</span>
+              </div>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <i class="fa-solid fa-fire"></i>
+                <div class="stat-details">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">Day Streak</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fa-solid fa-trophy"></i>
+                <div class="stat-details">
+                  <span class="stat-value">8</span>
+                  <span class="stat-label">Badges Earned</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fa-solid fa-check-circle"></i>
+                <div class="stat-details">
+                  <span class="stat-value">15</span>
+                  <span class="stat-label">Goals Completed</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fa-solid fa-ranking-star"></i>
+                <div class="stat-details">
+                  <span class="stat-value">Top 10%</span>
+                  <span class="stat-label">Leaderboard Rank</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rewards and Points System -->
+        <div class="section-header animate-fade-in">
+          <h2>Rewards & Points System</h2>
+          <p>Earn points and unlock rewards by developing good financial habits</p>
+        </div>
+
+        <div class="rewards-grid animate-fade-in">
+          <div class="reward-card animate-pop-in" style="animation-delay: 0.1s;">
+            <div class="reward-icon">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="reward-content">
+              <h3>Daily Streaks</h3>
+              <p>Log expenses and make savings regularly to build your streak</p>
+              <div class="reward-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span>12/15 days</span>
+              </div>
+              <div class="reward-points">+25 points per day</div>
+            </div>
+          </div>
+
+          <div class="reward-card animate-pop-in" style="animation-delay: 0.2s;">
+            <div class="reward-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="reward-content">
+              <h3>Goal Achievements</h3>
+              <p>Complete financial goals to unlock special rewards</p>
+              <div class="reward-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span>3/5 goals this month</span>
+              </div>
+              <div class="reward-points">+100 points per goal</div>
+            </div>
+          </div>
+
+          <div class="reward-card animate-pop-in" style="animation-delay: 0.3s;">
+            <div class="reward-icon">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div class="reward-content">
+              <h3>Smart Spending Badges</h3>
+              <p>Earn badges for good financial habits</p>
+              <div class="badges-container">
+                <div class="badge earned" title="Savings Guru">
+                  <i class="fa-solid fa-piggy-bank"></i>
+                </div>
+                <div class="badge earned" title="Budget Master">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="badge" title="Investor Pro">
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="badge" title="Debt Crusher">
+                  <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+              </div>
+              <div class="reward-points">+50 points per badge</div>
+            </div>
+          </div>
+
+          <div class="reward-card animate-pop-in" style="animation-delay: 0.4s;">
+            <div class="reward-icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="reward-content">
+              <h3>Community Contributions</h3>
+              <p>Engage in discussions to earn community points</p>
+              <div class="reward-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%;"></div>
+                </div>
+                <span>8/20 contributions this month</span>
+              </div>
+              <div class="reward-points">+10 points per contribution</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leaderboards and Challenges -->
+        <div class="section-header animate-fade-in">
+          <h2>Leaderboards & Challenges</h2>
+          <p>Compete with friends and the community in financial challenges</p>
+        </div>
+
+        <div class="challenges-container animate-fade-in">
+          <div class="tabs">
+            <div class="tab-header">
+              <button class="tab-btn active" data-tab="active-challenges">Active Challenges</button>
+              <button class="tab-btn" data-tab="leaderboards">Leaderboards</button>
+              <button class="tab-btn" data-tab="completed-challenges">Completed</button>
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="active-challenges">
+                <div class="challenges-grid">
+                  <div class="challenge-card animate-slide-in-left">
+                    <div class="challenge-header">
+                      <h3>Monthly Budget Challenge</h3>
+                      <span class="challenge-badge">In Progress</span>
+                    </div>
+                    <p>Stay within your budget this month and compete with friends</p>
+                    <div class="challenge-progress">
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                      </div>
+                      <span>20 days remaining</span>
+                    </div>
+                    <div class="challenge-participants">
+                      <div class="participant-avatars">
+                        <div class="avatar" title="You">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar" title="Sarah">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar" title="Mike">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar more" title="5 more participants">
+                          +5
+                        </div>
+                      </div>
+                      <button class="btn btn-sm btn-outline">View Details</button>
+                    </div>
+                  </div>
+
+                  <div class="challenge-card animate-slide-in-right">
+                    <div class="challenge-header">
+                      <h3>Investments Insights Challenge</h3>
+                      <span class="challenge-badge">New</span>
+                    </div>
+                    <p>Predict market changes and earn badges for accurate forecasts</p>
+                    <div class="challenge-progress">
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 25%;"></div>
+                      </div>
+                      <span>1/4 predictions made</span>
+                    </div>
+                    <div class="challenge-participants">
+                      <div class="participant-avatars">
+                        <div class="avatar" title="You">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar" title="John">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar" title="Lisa">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                      </div>
+                      <button class="btn btn-sm btn-primary">Join Challenge</button>
+                    </div>
+                  </div>
+
+                  <div class="challenge-card animate-slide-in-left">
+                    <div class="challenge-header">
+                      <h3>Spending Awareness Challenge</h3>
+                      <span class="challenge-badge">Popular</span>
+                    </div>
+                    <p>Track all expenses for 30 days and stay within your budget</p>
+                    <div class="challenge-progress">
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 40%;"></div>
+                      </div>
+                      <span>12/30 days completed</span>
+                    </div>
+                    <div class="challenge-participants">
+                      <div class="participant-avatars">
+                        <div class="avatar" title="You">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="avatar more" title="12 more participants">
+                          +12
+                        </div>
+                      </div>
+                      <button class="btn btn-sm btn-outline">View Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="leaderboards">
+                <div class="leaderboard-container">
+                  <div class="leaderboard-header">
+                    <h3>Monthly Budget Challenge Leaderboard</h3>
+                    <div class="leaderboard-filter">
+                      <select>
+                        <option>All Time</option>
+                        <option selected>This Month</option>
+                        <option>This Week</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="leaderboard-table">
+                    <div class="leaderboard-row header">
+                      <div class="rank">Rank</div>
+                      <div class="user">User</div>
+                      <div class="score">Score</div>
+                      <div class="status">Status</div>
+                    </div>
+                    <div class="leaderboard-row highlight">
+                      <div class="rank">3</div>
+                      <div class="user">
+                        <div class="avatar">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>You</span>
+                      </div>
+                      <div class="score">85%</div>
+                      <div class="status">
+                        <span class="badge success">On Track</span>
+                      </div>
+                    </div>
+                    <div class="leaderboard-row">
+                      <div class="rank">1</div>
+                      <div class="user">
+                        <div class="avatar">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>Sarah</span>
+                      </div>
+                      <div class="score">92%</div>
+                      <div class="status">
+                        <span class="badge success">On Track</span>
+                      </div>
+                    </div>
+                    <div class="leaderboard-row">
+                      <div class="rank">2</div>
+                      <div class="user">
+                        <div class="avatar">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>Mike</span>
+                      </div>
+                      <div class="score">88%</div>
+                      <div class="status">
+                        <span class="badge success">On Track</span>
+                      </div>
+                    </div>
+                    <div class="leaderboard-row">
+                      <div class="rank">4</div>
+                      <div class="user">
+                        <div class="avatar">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>John</span>
+                      </div>
+                      <div class="score">79%</div>
+                      <div class="status">
+                        <span class="badge warning">At Risk</span>
+                      </div>
+                    </div>
+                    <div class="leaderboard-row">
+                      <div class="rank">5</div>
+                      <div class="user">
+                        <div class="avatar">
+                          <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>Lisa</span>
+                      </div>
+                      <div class="score">72%</div>
+                      <div class="status">
+                        <span class="badge warning">At Risk</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="completed-challenges">
+                <div class="completed-challenges-grid">
+                  <div class="challenge-card completed">
+                    <div class="challenge-header">
+                      <h3>No Unnecessary Spending Week</h3>
+                      <span class="challenge-badge success">Completed</span>
+                    </div>
+                    <p>Avoided unnecessary purchases for a full week</p>
+                    <div class="challenge-result">
+                      <div class="result-item">
+                        <span class="result-label">Your Result:</span>
+                        <span class="result-value">5/7 days successful</span>
+                      </div>
+                      <div class="result-item">
+                        <span class="result-label">Points Earned:</span>
+                        <span class="result-value">+150 points</span>
+                      </div>
+                      <div class="result-item">
+                        <span class="result-label">Rank:</span>
+                        <span class="result-value">8th of 32</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">View Certificate</button>
+                  </div>
+
+                  <div class="challenge-card completed">
+                    <div class="challenge-header">
+                      <h3>Smart Shopper Quest</h3>
+                      <span class="challenge-badge success">Completed</span>
+                    </div>
+                    <p>Made financially sound purchases for a month</p>
+                    <div class="challenge-result">
+                      <div class="result-item">
+                        <span class="result-label">Your Result:</span>
+                        <span class="result-value">92% success rate</span>
+                      </div>
+                      <div class="result-item">
+                        <span class="result-label">Points Earned:</span>
+                        <span class="result-value">+200 points</span>
+                      </div>
+                      <div class="result-item">
+                        <span class="result-label">Rank:</span>
+                        <span class="result-value">3rd of 45</span>
+                      </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">View Certificate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Finance Quests -->
+        <div class="section-header animate-fade-in">
+          <h2>Personal Finance Quests</h2>
+          <p>Complete quests to improve your financial habits and earn rewards</p>
+        </div>
+
+        <div class="quests-container animate-fade-in">
+          <div class="quest-card active animate-slide-in-left">
+            <div class="quest-icon">
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <div class="quest-content">
+              <div class="quest-header">
+                <h3>Save ₹5,000 in 30 Days</h3>
+                <span class="quest-badge">Active</span>
+              </div>
+              <p>Build your savings habit by setting aside a small amount each day</p>
+              <div class="quest-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span>₹3,000/₹5,000 saved</span>
+              </div>
+              <div class="quest-rewards">
+                <div class="reward-item">
+                  <i class="fa-solid fa-star"></i>
+                  <span>250 Points</span>
+                </div>
+                <div class="reward-item">
+                  <i class="fa-solid fa-medal"></i>
+                  <span>Saver Badge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-card active animate-slide-in-right">
+            <div class="quest-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="quest-content">
+              <div class="quest-header">
+                <h3>Smart Shopper Quest</h3>
+                <span class="quest-badge">Active</span>
+              </div>
+              <p>Make financially sound purchases and avoid impulse buying</p>
+              <div class="quest-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%;"></div>
+                </div>
+                <span>8/20 smart purchases</span>
+              </div>
+              <div class="quest-rewards">
+                <div class="reward-item">
+                  <i class="fa-solid fa-star"></i>
+                  <span>200 Points</span>
+                </div>
+                <div class="reward-item">
+                  <i class="fa-solid fa-medal"></i>
+                  <span>Smart Shopper Badge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-card locked animate-slide-in-left">
+            <div class="quest-icon">
+              <i class="fa-solid fa-ban"></i>
+            </div>
+            <div class="quest-content">
+              <div class="quest-header">
+                <h3>No Unnecessary Spending Week</h3>
+                <span class="quest-badge locked">Locked</span>
+              </div>
+              <p>Avoid all unnecessary purchases for a full week</p>
+              <div class="quest-unlock">
+                <i class="fa-solid fa-lock"></i>
+                <span>Complete "Smart Shopper Quest" to unlock</span>
+              </div>
+              <div class="quest-rewards">
+                <div class="reward-item">
+                  <i class="fa-solid fa-star"></i>
+                  <span>300 Points</span>
+                </div>
+                <div class="reward-item">
+                  <i class="fa-solid fa-medal"></i>
+                  <span>Discipline Master Badge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redeemable Perks -->
+        <div class="section-header animate-fade-in">
+          <h2>Redeemable Perks</h2>
+          <p>Use your points to unlock exclusive benefits and rewards</p>
+        </div>
+
+        <div class="perks-container animate-fade-in">
+          <div class="perks-grid">
+            <div class="perk-card animate-pop-in" style="animation-delay: 0.1s;">
+              <div class="perk-image">
+                <i class="fa-solid fa-tag"></i>
+              </div>
+              <div class="perk-content">
+                <h3>10% Shop Discount</h3>
+                <p>Get 10% off on your next purchase in the shop</p>
+                <div class="perk-cost">
+                  <i class="fa-solid fa-star"></i>
+                  <span>500 Points</span>
+                </div>
+                <button class="btn btn-primary btn-block">Redeem</button>
+              </div>
+            </div>
+
+            <div class="perk-card animate-pop-in" style="animation-delay: 0.2s;">
+              <div class="perk-image">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="perk-content">
+                <h3>Premium AI Insights</h3>
+                <p>Unlock advanced financial analysis from our AI assistant</p>
+                <div class="perk-cost">
+                  <i class="fa-solid fa-star"></i>
+                  <span>750 Points</span>
+                </div>
+                <button class="btn btn-primary btn-block">Redeem</button>
+              </div>
+            </div>
+
+            <div class="perk-card locked animate-pop-in" style="animation-delay: 0.3s;">
+              <div class="perk-image">
+                <i class="fa-solid fa-book"></i>
+              </div>
+              <div class="perk-content">
+                <h3>Exclusive Financial Guide</h3>
+                <p>Access premium content on advanced investment strategies</p>
+                <div class="perk-cost">
+                  <i class="fa-solid fa-star"></i>
+                  <span>1000 Points</span>
+                </div>
+                <button class="btn btn-outline btn-block" disabled>Not Enough Points</button>
+              </div>
+            </div>
+
+            <div class="perk-card locked animate-pop-in" style="animation-delay: 0.4s;">
+              <div class="perk-image">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div class="perk-content">
+                <h3>1-on-1 Financial Consultation</h3>
+                <p>30-minute session with a certified financial advisor</p>
+                <div class="perk-cost">
+                  <i class="fa-solid fa-star"></i>
+                  <span>2000 Points</span>
+                </div>
+                <button class="btn btn-outline btn-block" disabled>Not Enough Points</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/gamification.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #000000, #1a0033, #330066);
+      padding: 20px;
+    }
+
+    .auth-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: var(--background);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .auth-header {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(135deg, #a855f7, #7e22ce);
+      color: white;
+    }
+
+    .auth-header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .auth-header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .auth-form {
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--foreground);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+      outline: none;
+    }
+
+    .auth-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #a855f7, #7e22ce);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 15px;
+    }
+
+    .auth-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+    }
+
+    .auth-divider {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .auth-divider::before,
+    .auth-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    .auth-divider span {
+      padding: 0 15px;
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .google-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background-color: var(--background);
+      color: var(--foreground);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .google-btn:hover {
+      background-color: var(--muted);
+      transform: translateY(-2px);
+    }
+
+    .google-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .auth-footer {
+      text-align: center;
+      padding: 0 30px 30px;
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .auth-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .forgot-password a {
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.25rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .error-message {
+      color: var(--danger);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .success-message {
+      color: var(--success);
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="auth-container animate-fade-in">
+    <div class="auth-header">
+      <h1>Welcome to FinWiz</h1>
+      <p>Sign in to continue to your dashboard</p>
+    </div>
+
+    <div class="auth-form">
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <div class="error-message" id="loginError"></div>
+        </div>
+        <div class="forgot-password">
+          <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+        </div>
+        <button type="submit" class="auth-btn">Sign In</button>
+      </form>
+
+      <div class="auth-divider">
+        <span>OR</span>
+      </div>
+
+      <div class="social-login">
+        <button class="google-btn" id="googleSignInBtn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+          Sign in with Google
+        </button>
+      </div>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Login form submission
+      const loginForm = document.getElementById('loginForm');
+      
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simply redirect to dashboard
+        window.location.href = 'dashboard.html';
+      });
+
+      // Google Sign In
+      const googleSignInBtn = document.getElementById('googleSignInBtn');
+      
+      googleSignInBtn.addEventListener('click', () => {
+        // Simply redirect to dashboard
+        window.location.href = 'dashboard.html';
+      });
+
+      // Forgot Password
+      const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+      
+      forgotPasswordLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Password reset functionality would be implemented here.');
+      });
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,576 @@
+/* Wallet Page Styles */
+
+/* Wallet Summary */
+.wallet-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: rgba(217, 70, 239, 0.1);
+  color: var(--primary);
+}
+
+.summary-icon i {
+  font-size: 1.5rem;
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-content h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.summary-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.summary-change {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.summary-change.positive {
+  color: var(--success);
+}
+
+.summary-change.negative {
+  color: var(--danger);
+}
+
+/* Payment Methods Grid */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.payment-card {
+  position: relative;
+  height: 180px;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.credit-card {
+  background: linear-gradient(135deg, #330066, #1a0033);
+  color: white;
+}
+
+.bank-account {
+  background: linear-gradient(135deg, #1a0033, #330066);
+  color: white;
+}
+
+.add-new {
+  background-color: rgba(31, 31, 31, 0.8);
+  border: 2px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-new:hover {
+  border-color: var(--primary);
+}
+
+.add-new-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted-foreground);
+}
+
+.add-new-content i {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.add-new-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.card-chip {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-network {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card-number {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.card-details {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-holder,
+.card-expiry {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.card-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: var(--radius);
+}
+
+.payment-card:hover .card-actions {
+  opacity: 1;
+}
+
+.card-action-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bank-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.bank-name {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.account-number {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.account-details {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-type,
+.account-balance {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wallet Transactions */
+.wallet-transactions {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transaction-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.transaction-icon.blue {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--info);
+}
+
+.transaction-icon.green {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.transaction-icon.yellow {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.transaction-icon.red {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.transaction-icon i {
+  font-size: 1rem;
+}
+
+.transaction-details .transaction-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.transaction-details .transaction-date {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.transaction-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.transaction-amount {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.transaction-amount.positive {
+  color: var(--success);
+}
+
+.transaction-amount.negative {
+  color: var(--danger);
+}
+
+/* Analytics Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-card {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-header h3 {
+  font-size: 1.125rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.card-header select {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: var(--foreground);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Chart Placeholders */
+.chart-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 300px;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .chart-placeholder {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.donut-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.donut-segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* First segment (largest) */
+.donut-segment:nth-child(1) {
+  background-color: var(--segment-color, #d946ef);
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%);
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+/* Second segment */
+.donut-segment:nth-child(2) {
+  background-color: var(--segment-color, #a855f7);
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 50% 50%);
+  transform-origin: center;
+  transform: rotate(162deg);
+}
+
+/* Third segment (smallest) */
+.donut-segment:nth-child(3) {
+  background-color: var(--segment-color, #8b5cf6);
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 25%, 50% 50%);
+  transform-origin: center;
+  transform: rotate(270deg);
+}
+
+/* Add a center circle to create donut effect */
+.donut-chart::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: var(--background);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Improve chart legend */
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.legend-item:hover {
+  transform: translateX(5px);
+}
+
+.legend-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.legend-item:hover .legend-color {
+  transform: scale(1.2);
+}
+
+.legend-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+/* Line Chart */
+.line-chart {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background-color: var(--background);
+  border-radius: var(--radius);
+}
+
+.chart-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(217, 70, 239, 0.1), rgba(217, 70, 239, 0.3));
+  clip-path: polygon(0% 80%, 20% 60%, 40% 70%, 60% 50%, 80% 55%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.chart-point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  transform: translate(-50%, 50%);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--foreground);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .transaction-card {
+    margin-top: 0.5rem;
+  }
+
+  .transaction-amount {
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
+}
+

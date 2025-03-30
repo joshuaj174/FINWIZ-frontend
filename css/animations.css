@@ -1,0 +1,335 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-pop-in {
+  animation: popIn 0.6s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Element Animations */
+.logo:hover i {
+  animation: pulse 1s infinite;
+}
+
+.btn-primary:hover {
+  animation: pulse 0.5s;
+}
+
+.sidebar-link:hover i {
+  animation: pulse 0.5s;
+}
+
+.feature-card i {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover i {
+  transform: scale(1.2);
+  animation: pulse 1.5s infinite;
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+  background: linear-gradient(90deg, var(--muted) 25%, var(--border) 50%, var(--muted) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Transition Effects */
+.nav-link,
+.sidebar-link,
+.btn,
+.social-link,
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: rgba(31, 31, 31, 0.8) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* Tab Transitions */
+.tab-content {
+  transition: opacity 0.3s ease;
+}
+
+.tab-pane {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.tab-pane.active {
+  opacity: 1;
+  display: block;
+}
+
+/* Sidebar Animation */
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Progress Bar Animation */
+.progress {
+  transition: width 1s ease-in-out;
+}
+
+/* Staggered Animations */
+.features-grid .feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.features-grid .feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.features-grid .feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.features-grid .feature-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.features-grid .feature-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.features-grid .feature-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Stats Animation */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: rgba(31, 31, 31, 0.8) !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card:hover .stat-value {
+  animation: pulse 1s;
+}
+
+/* Transaction Item Animation */
+.transaction-item {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.transaction-item:hover {
+  transform: translateX(5px);
+  background-color: var(--muted);
+}
+
+/* Button Animation */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Form Input Animation */
+.form-group input:focus,
+.form-group select:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Message Animation */
+.chat-message {
+  animation: slideInUp 0.3s ease-out forwards;
+}
+
+.chat-message.user {
+  animation-delay: 0.1s;
+}
+
+.chat-message.assistant {
+  animation-delay: 0.3s;
+}
+
+/* Fade-in animation for all elements */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Transparency effects */
+.transparent-bg {
+  background-color: rgba(31, 31, 31, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Highlight animation */
+.highlight {
+  animation: pulse 1.5s;
+}
+

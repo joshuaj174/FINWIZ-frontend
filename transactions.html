@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/transactions.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link active">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Transactions</h1>
+        <div class="header-actions">
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus-circle"></i>
+            Add Transaction
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <!-- Transaction Summary -->
+        <div class="transaction-summary animate-fade-in">
+          <div class="summary-card">
+            <div class="summary-icon income">
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="summary-content">
+              <h3>Income</h3>
+              <p class="summary-amount">₹45,250.00</p>
+              <p class="summary-change positive">+12.5% from last month</p>
+            </div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-icon expense">
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <div class="summary-content">
+              <h3>Expenses</h3>
+              <p class="summary-amount">₹32,180.00</p>
+              <p class="summary-change negative">+8.3% from last month</p>
+            </div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-icon balance">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="summary-content">
+              <h3>Balance</h3>
+              <p class="summary-amount">₹13,070.00</p>
+              <p class="summary-change positive">+25.2% from last month</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction Filters -->
+        <div class="transaction-filters animate-fade-in">
+          <div class="filter-group">
+            <div class="search-box">
+              <i class="fa-solid fa-search"></i>
+              <input type="text" placeholder="Search transactions...">
+            </div>
+            <div class="date-filter">
+              <select>
+                <option>This Month</option>
+                <option>Last Month</option>
+                <option>Last 3 Months</option>
+                <option>Last 6 Months</option>
+                <option>This Year</option>
+                <option>Custom Range</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="type-filter">
+              <button class="filter-btn active">All</button>
+              <button class="filter-btn">Income</button>
+              <button class="filter-btn">Expense</button>
+            </div>
+            <div class="category-filter">
+              <select>
+                <option>All Categories</option>
+                <option>Food & Dining</option>
+                <option>Shopping</option>
+                <option>Housing</option>
+                <option>Transportation</option>
+                <option>Entertainment</option>
+                <option>Utilities</option>
+                <option>Salary</option>
+                <option>Investments</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction List -->
+        <div class="transaction-list-container animate-fade-in">
+          <div class="transaction-list-header">
+            <div class="transaction-date">Date</div>
+            <div class="transaction-description">Description</div>
+            <div class="transaction-category">Category</div>
+            <div class="transaction-amount">Amount</div>
+            <div class="transaction-actions">Actions</div>
+          </div>
+          
+          <div class="transaction-list">
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.1s;">
+              <div class="transaction-date">
+                <div class="date-day">15</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Salary Deposit</div>
+                <div class="transaction-account">HDFC Bank</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag income">Salary</div>
+              </div>
+              <div class="transaction-amount income">+₹45,000.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.2s;">
+              <div class="transaction-date">
+                <div class="date-day">14</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Grocery Shopping</div>
+                <div class="transaction-account">ICICI Credit Card</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Food & Dining</div>
+              </div>
+              <div class="transaction-amount expense">-₹3,250.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.3s;">
+              <div class="transaction-date">
+                <div class="date-day">12</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Electricity Bill</div>
+                <div class="transaction-account">SBI Debit Card</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Utilities</div>
+              </div>
+              <div class="transaction-amount expense">-₹1,850.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.4s;">
+              <div class="transaction-date">
+                <div class="date-day">10</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Restaurant Dinner</div>
+                <div class="transaction-account">HDFC Credit Card</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Food & Dining</div>
+              </div>
+              <div class="transaction-amount expense">-₹2,450.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.5s;">
+              <div class="transaction-date">
+                <div class="date-day">08</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Movie Tickets</div>
+                <div class="transaction-account">ICICI Debit Card</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Entertainment</div>
+              </div>
+              <div class="transaction-amount expense">-₹850.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.6s;">
+              <div class="transaction-date">
+                <div class="date-day">05</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Rent Payment</div>
+                <div class="transaction-account">HDFC Bank</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Housing</div>
+              </div>
+              <div class="transaction-amount expense">-₹18,000.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.7s;">
+              <div class="transaction-date">
+                <div class="date-day">03</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Freelance Payment</div>
+                <div class="transaction-account">PayPal</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag income">Freelance</div>
+              </div>
+              <div class="transaction-amount income">+₹12,500.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.8s;">
+              <div class="transaction-date">
+                <div class="date-day">01</div>
+                <div class="date-month">APR</div>
+              </div>
+              <div class="transaction-description">
+                <div class="transaction-name">Mobile Phone Bill</div>
+                <div class="transaction-account">SBI Credit Card</div>
+              </div>
+              <div class="transaction-category">
+                <div class="category-tag expense">Utilities</div>
+              </div>
+              <div class="transaction-amount expense">-₹999.00</div>
+              <div class="transaction-actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn disabled">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <span class="pagination-ellipsis">...</span>
+            <button class="pagination-btn">10</button>
+            <button class="pagination-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Transaction Analytics -->
+        <div class="transaction-analytics animate-fade-in">
+          <div class="analytics-card">
+            <div class="card-header">
+              <h2>Spending by Category</h2>
+              <select>
+                <option>This Month</option>
+                <option>Last Month</option>
+                <option>Last 3 Months</option>
+              </select>
+            </div>
+            <div class="card-content">
+              <div class="chart-placeholder">
+                <div class="donut-chart">
+                  <div class="donut-segment" style="--segment-color: #3b82f6; --segment-size: 30%;"></div>
+                  <div class="donut-segment" style="--segment-color: #10b981; --segment-size: 25%;"></div>
+                  <div class="donut-segment" style="--segment-color: #f59e0b; --segment-size: 20%;"></div>
+                  <div class="donut-segment" style="--segment-color: #ef4444; --segment-size: 15%;"></div>
+                  <div class="donut-segment" style="--segment-color: #8b5cf6; --segment-size: 10%;"></div>
+                </div>
+                <div class="chart-legend">
+                  <div class="legend-item">
+                    <div class="legend-color" style="background-color: #3b82f6;"></div>
+                    <div class="legend-text">
+                      <span>Housing</span>
+                      <span>30%</span>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background-color: #10b981;"></div>
+                    <div class="legend-text">
+                      <span>Food & Dining</span>
+                      <span>25%</span>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f59e0b;"></div>
+                    <div class="legend-text">
+                      <span>Transportation</span>
+                      <span>20%</span>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ef4444;"></div>
+                    <div class="legend-text">
+                      <span>Utilities</span>
+                      <span>15%</span>
+                    </div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                    <div class="legend-text">
+                      <span>Entertainment</span>
+                      <span>10%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics-card">
+            <div class="card-header">
+              <h2>Income vs. Expenses</h2>
+              <select>
+                <option>This Year</option>
+                <option>Last Year</option>
+              </select>
+            </div>
+            <div class="card-content">
+              <div class="chart-placeholder">
+                <div class="bar-chart">
+                  <div class="chart-bars">
+                    <div class="month-bar">
+                      <div class="bar-label">Jan</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 60%;"></div>
+                        <div class="bar expense" style="height: 40%;"></div>
+                      </div>
+                    </div>
+                    <div class="month-bar">
+                      <div class="bar-label">Feb</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 70%;"></div>
+                        <div class="bar expense" style="height: 50%;"></div>
+                      </div>
+                    </div>
+                    <div class="month-bar">
+                      <div class="bar-label">Mar</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 65%;"></div>
+                        <div class="bar expense" style="height: 55%;"></div>
+                      </div>
+                    </div>
+                    <div class="month-bar">
+                      <div class="bar-label">Apr</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 80%;"></div>
+                        <div class="bar expense" style="height: 60%;"></div>
+                      </div>
+                    </div>
+                    <div class="month-bar">
+                      <div class="bar-label">May</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 75%;"></div>
+                        <div class="bar expense" style="height: 65%;"></div>
+                      </div>
+                    </div>
+                    <div class="month-bar">
+                      <div class="bar-label">Jun</div>
+                      <div class="bar-group">
+                        <div class="bar income" style="height: 85%;"></div>
+                        <div class="bar expense" style="height: 70%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <div class="legend-color income"></div>
+                      <div class="legend-text">Income</div>
+                    </div>
+                    <div class="legend-item">
+                      <div class="legend-color expense"></div>
+                      <div class="legend-text">Expenses</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/transactions.js"></script>
+</body>
+</html>
+

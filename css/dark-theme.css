@@ -1,0 +1,307 @@
+/* Dark Theme Styles */
+:root {
+  /* Light Theme (Default) */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --secondary-light: #34d399;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+  --radius: 0.5rem;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Dark Theme Variables */
+.dark {
+  --primary: #d946ef; /* Bright purple */
+  --primary-dark: #c026d3;
+  --primary-light: #e879f9;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --secondary-light: #34d399;
+  --background: #0a0a0a; /* Near black */
+  --foreground: #f9fafb;
+  --muted: #1f1f1f; /* Dark gray */
+  --muted-foreground: #9ca3af;
+  --border: #2d2d2d;
+  --input: #2d2d2d;
+  --ring: #d946ef;
+  --radius: 0.5rem;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Apply dark theme by default */
+:root {
+  --primary: #d946ef; /* Bright purple */
+  --primary-dark: #c026d3;
+  --primary-light: #e879f9;
+  --secondary: #10b981;
+  --secondary-dark: #059669;
+  --secondary-light: #34d399;
+  --background: #0a0a0a; /* Near black */
+  --foreground: #f9fafb;
+  --muted: #1f1f1f; /* Dark gray */
+  --muted-foreground: #9ca3af;
+  --border: #2d2d2d;
+  --input: #2d2d2d;
+  --ring: #d946ef;
+  --radius: 0.5rem;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Dark Theme Specific Styles */
+.logo {
+  color: var(--primary);
+}
+
+.sidebar {
+  background-color: #0a0a0a; /* Slightly darker than background */
+  color: #f9fafb;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background-color: rgba(217, 70, 239, 0.2); /* Purple with opacity */
+  color: var(--primary);
+}
+
+.card,
+.summary-card,
+.category-card,
+.recommendation-card,
+.profile-card,
+.account-details,
+.settings-item {
+  background-color: rgba(26, 26, 26, 0.8); /* Slightly lighter than background with transparency */
+  border-color: var(--border);
+  color: var(--foreground);
+  backdrop-filter: blur(10px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d946ef, #c026d3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c026d3, #a21caf);
+}
+
+.btn-outline {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.progress {
+  background-color: var(--primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--foreground);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--muted);
+}
+
+/* Gradient Backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #000000, #1a0033, #330066);
+  color: white;
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #d946ef, #a21caf);
+}
+
+/* Custom Scrollbar for Dark Mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
+
+/* Enhanced Animations for Dark Mode */
+.animate-pulse {
+  animation: darkPulse 2s infinite;
+}
+
+@keyframes darkPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Glow effects for dark mode */
+.glow-effect {
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.5);
+}
+
+/* Enhanced Card Hover Effects */
+.card:hover,
+.summary-card:hover,
+.category-card:hover,
+.recommendation-card:hover {
+  box-shadow: 0 8px 20px rgba(217, 70, 239, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Fix for dark text on dark background */
+input,
+select,
+textarea {
+  color: var(--foreground) !important;
+  background-color: rgba(26, 26, 26, 0.8) !important;
+}
+
+.detail-value,
+.setting-title,
+.category-content h3,
+.recommendation-content h3,
+.product-content h3 {
+  color: var(--foreground);
+}
+
+.detail-label,
+.setting-description,
+.category-allocation,
+.recommendation-description,
+.product-description {
+  color: var(--muted-foreground);
+}
+
+/* Dashboard header */
+.dashboard-header {
+  background-color: rgba(10, 10, 10, 0.8);
+  border-bottom-color: var(--border);
+  backdrop-filter: blur(10px);
+}
+
+/* Main content background */
+.main-content {
+  background-color: var(--background);
+}
+
+/* Dashboard main content */
+.dashboard-main {
+  background-color: var(--background);
+}
+
+/* Fix for dropdown text colors */
+select option {
+  background-color: #1a1a1a;
+  color: var(--foreground);
+}
+
+/* Fix for pagination text color */
+.pagination-btn {
+  color: var(--foreground) !important;
+}
+
+/* Fix for tab buttons text color */
+.tab-btn,
+.filter-tab,
+.category-tab {
+  color: var(--foreground) !important;
+}
+
+/* Fix for AI-Driven Budget Planner text color */
+.budget-form label,
+.budget-form input,
+.budget-form select,
+.budget-form .checkbox-item label {
+  color: var(--foreground) !important;
+}
+
+/* Fix for chart legends and labels */
+.chart-legend,
+.chart-labels,
+.legend-text,
+.legend-item {
+  color: var(--foreground) !important;
+}
+
+/* Fix for community filter tabs */
+.filter-tabs .filter-tab {
+  color: var(--foreground) !important;
+}
+
+/* Settings items in horizontal layout */
+@media (min-width: 768px) {
+  .settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .setting-info {
+    flex: 2;
+  }
+
+  .switch,
+  .setting-select,
+  .btn-small {
+    flex: 1;
+    max-width: 200px;
+  }
+}
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinWiz - Smart Spending. Smarter Investing.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: linear-gradient(135deg, #000000, #1a0033, #330066);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .landing-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .landing-header {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .logo i {
+      color: #d946ef;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #d946ef;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-login {
+      background: transparent;
+      border: 2px solid #d946ef;
+      color: white;
+    }
+
+    .btn-login:hover {
+      background: rgba(217, 70, 239, 0.2);
+    }
+
+    .btn-signup {
+      background: #d946ef;
+      border: 2px solid #d946ef;
+      color: white;
+    }
+
+    .btn-signup:hover {
+      background: #c026d3;
+      border-color: #c026d3;
+    }
+
+    .hero-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #d946ef, #f0abfc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #d946ef;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn-hero {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .hero-image {
+      margin-top: 3rem;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      color: #d946ef;
+    }
+
+    .landing-footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .landing-footer a {
+      color: #d946ef;
+      text-decoration: none;
+    }
+
+    .landing-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .team-names {
+      margin-top: 0.5rem;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <header class="landing-header">
+      <div class="logo">
+        <i class="fa-solid fa-dollar-sign"></i>
+        <span>FinWiz</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-login">Login</a>
+        <a href="signup.html" class="btn btn-signup">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="hero-section">
+      <div class="hero-content animate-fade-in">
+        <h1 class="hero-title">FINWIZ</h1>
+        <p class="hero-subtitle">Smart Spending. Smarter Investing.</p>
+        <div class="hero-buttons">
+          <a href="signup.html" class="btn btn-signup btn-hero">Get Started</a>
+          <a href="login.html" class="btn btn-login btn-hero">Learn More</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="landing-footer">
+      <p>&copy; 2025 FinWiz. All rights reserved.</p>
+      <p class="team-names">ARJUN | NEVAN | ALISTER | ASHMAN | JOSHUA</p>
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script>
+    // No authentication check needed
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallet - FinWiz</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/wallet.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="dashboard-container">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <i class="fa-solid fa-dollar-sign"></i>
+        <span class="logo-text">FinWiz</span>
+      </div>
+      <button class="close-sidebar" id="closeSidebar">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link">
+        <i class="fa-solid fa-home"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="budgeting.html" class="sidebar-link">
+        <i class="fa-solid fa-chart-bar"></i>
+        <span>Budgeting</span>
+      </a>
+      <a href="ai-assistant.html" class="sidebar-link">
+        <i class="fa-solid fa-brain"></i>
+        <span>AI Assistant</span>
+      </a>
+      <a href="gamification.html" class="sidebar-link">
+        <i class="fa-solid fa-trophy"></i>
+        <span>Gamification</span>
+      </a>
+      <a href="community.html" class="sidebar-link">
+        <i class="fa-solid fa-users"></i>
+        <span>Community</span>
+      </a>
+      <a href="transactions.html" class="sidebar-link">
+        <i class="fa-solid fa-credit-card"></i>
+        <span>Transactions</span>
+      </a>
+      <a href="investments.html" class="sidebar-link">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Investments</span>
+      </a>
+      <a href="shop.html" class="sidebar-link">
+        <i class="fa-solid fa-shopping-bag"></i>
+        <span>Shop</span>
+      </a>
+      <a href="wallet.html" class="sidebar-link active">
+        <i class="fa-solid fa-wallet"></i>
+        <span>Wallet</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="profile.html" class="sidebar-link">
+        <i class="fa-solid fa-user"></i>
+        <span>Profile</span>
+      </a>
+      <a href="settings.html" class="sidebar-link">
+        <i class="fa-solid fa-cog"></i>
+        <span>Settings</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="fa-solid fa-sign-out-alt"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="dashboard-header">
+      <button class="toggle-sidebar" id="toggleSidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <h1 class="page-title">Wallet</h1>
+      <div class="header-actions">
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-plus-circle"></i>
+          Add Payment Method
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <!-- Wallet Summary -->
+      <div class="wallet-summary animate-fade-in">
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <div class="summary-content">
+            <h3>Total Balance</h3>
+            <p class="summary-amount">₹12,580.00</p>
+            <p class="summary-change positive">+2.5% from last month</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <div class="summary-content">
+            <h3>Available Credit</h3>
+            <p class="summary-amount">₹45,000.00</p>
+            <p class="summary-change">Limit: ₹50,000.00</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+          <div class="summary-content">
+            <h3>Rewards Points</h3>
+            <p class="summary-amount">1,250 Points</p>
+            <p class="summary-change positive">+150 this month</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="section-header animate-fade-in">
+        <h2>Payment Methods</h2>
+        <p>Manage your cards and bank accounts</p>
+      </div>
+
+      <div class="payment-methods-grid animate-fade-in">
+        <div class="payment-card credit-card animate-pop-in" style="animation-delay: 0.1s;">
+          <div class="card-chip">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="card-network">
+            <i class="fa-brands fa-cc-visa"></i>
+          </div>
+          <div class="card-number">
+            <span>•••• •••• •••• 4567</span>
+          </div>
+          <div class="card-details">
+            <div class="card-holder">
+              <span class="label">Card Holder</span>
+              <span class="value">John Doe</span>
+            </div>
+            <div class="card-expiry">
+              <span class="label">Expires</span>
+              <span class="value">12/25</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button class="card-action-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="payment-card credit-card animate-pop-in" style="animation-delay: 0.2s;">
+          <div class="card-chip">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="card-network">
+            <i class="fa-brands fa-cc-mastercard"></i>
+          </div>
+          <div class="card-number">
+            <span>•••• •••• •••• 7890</span>
+          </div>
+          <div class="card-details">
+            <div class="card-holder">
+              <span class="label">Card Holder</span>
+              <span class="value">John Doe</span>
+            </div>
+            <div class="card-expiry">
+              <span class="label">Expires</span>
+              <span class="value">09/26</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button class="card-action-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="payment-card bank-account animate-pop-in" style="animation-delay: 0.3s;">
+          <div class="bank-logo">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="bank-name">HDFC Bank</div>
+          <div class="account-number">
+            <span>•••• •••• 1234</span>
+          </div>
+          <div class="account-details">
+            <div class="account-type">
+              <span class="label">Account Type</span>
+              <span class="value">Savings</span>
+            </div>
+            <div class="account-balance">
+              <span class="label">Balance</span>
+              <span class="value">₹8,450.00</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button class="card-action-btn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="payment-card add-new animate-pop-in" style="animation-delay: 0.4s;">
+          <div class="add-new-content">
+            <i class="fa-solid fa-plus-circle"></i>
+            <p>Add New Payment Method</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Transactions -->
+      <div class="section-header animate-fade-in">
+        <h2>Recent Transactions</h2>
+        <p>Your latest spending activities</p>
+      </div>
+
+      <div class="wallet-transactions animate-fade-in">
+        <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.1s;">
+          <div class="transaction-info">
+            <div class="transaction-icon blue">
+              <i class="fa-solid fa-shopping-bag"></i>
+            </div>
+            <div class="transaction-details">
+              <p class="transaction-name">Grocery Store</p>
+              <p class="transaction-date">Today, 10:30 AM</p>
+            </div>
+          </div>
+          <div class="transaction-card">
+            <i class="fa-brands fa-cc-visa"></i>
+            <span>•••• 4567</span>
+          </div>
+          <p class="transaction-amount negative">-₹65.40</p>
+        </div>
+
+        <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.2s;">
+          <div class="transaction-info">
+            <div class="transaction-icon green">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="transaction-details">
+              <p class="transaction-name">Salary Deposit</p>
+              <p class="transaction-date">Yesterday, 9:00 AM</p>
+            </div>
+          </div>
+          <div class="transaction-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>HDFC Bank</span>
+          </div>
+          <p class="transaction-amount positive">+₹2,500.00</p>
+        </div>
+
+        <div class="transaction-item animate-slide-in-up" style="animation-delay: 0.3s;">
+          <div class="transaction-info">
+            <div class="transaction-icon yellow">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="transaction-details">
+              <p class="transaction-name">Restaurant</p>
+              <p class="transaction-date">Yesterday, 7:30 PM</p>
+            </div>
+          </div>
+          <div class="transaction-card">
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <span>•••• 7890</span>
+          </div>
+          <p class="transaction-amount negative">-₹42.80</p>
+        </div>
+      </div>
+
+      <!-- Payment Analytics -->
+      <div class="section-header animate-fade-in">
+        <h2>Payment Analytics</h2>
+        <p>Insights into your spending patterns</p>
+      </div>
+
+      <div class="analytics-grid animate-fade-in">
+        <div class="analytics-card animate-slide-in-left">
+          <div class="card-header">
+            <h3>Spending by Payment Method</h3>
+            <select>
+              <option>This Month</option>
+              <option>Last Month</option>
+              <option>Last 3 Months</option>
+            </select>
+          </div>
+          <div class="card-content">
+            <div class="chart-placeholder">
+              <div class="donut-chart">
+                <div class="donut-segment" style="--segment-color: #d946ef; --segment-size: 45%;"></div>
+                <div class="donut-segment" style="--segment-color: #a855f7; --segment-size: 30%;"></div>
+                <div class="donut-segment" style="--segment-color: #8b5cf6; --segment-size: 25%;"></div>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: #d946ef;"></div>
+                  <div class="legend-text">
+                    <span>VISA Card</span>
+                    <span>45%</span>
+                  </div>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: #a855f7;"></div>
+                  <div class="legend-text">
+                    <span>Mastercard</span>
+                    <span>30%</span>
+                  </div>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                  <div class="legend-text">
+                    <span>Bank Account</span>
+                    <span>25%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analytics-card animate-slide-in-right">
+          <div class="card-header">
+            <h3>Monthly Spending Trend</h3>
+            <select>
+              <option>Last 6 Months</option>
+              <option>Last Year</option>
+            </select>
+          </div>
+          <div class="card-content">
+            <div class="chart-placeholder">
+              <div class="line-chart">
+                <div class="chart-line"></div>
+                <div class="chart-point" style="left: 0%; bottom: 20%;"></div>
+                <div class="chart-point" style="left: 20%; bottom: 40%;"></div>
+                <div class="chart-point" style="left: 40%; bottom: 30%;"></div>
+                <div class="chart-point" style="left: 60%; bottom: 50%;"></div>
+                <div class="chart-point" style="left: 80%; bottom: 45%;"></div>
+                <div class="chart-point" style="left: 100%; bottom: 60%;"></div>
+              </div>
+              <div class="chart-labels">
+                <span>Jan</span>
+                <span>Feb</span>
+                <span>Mar</span>
+                <span>Apr</span>
+                <span>May</span>
+                <span>Jun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/wallet.js"></script>
+</body>
+</html>
+

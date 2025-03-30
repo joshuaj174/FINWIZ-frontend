@@ -1,0 +1,264 @@
+/* Budgeting Page Styles */
+
+/* Budget Summary */
+.budget-summary {
+  margin-bottom: 1.5rem;
+}
+
+.budget-total {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.budget-item label {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.budget-value {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.budget-value.positive {
+  color: var(--success);
+}
+
+.budget-note {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* Budget Categories Section */
+.budget-categories-section {
+  margin-top: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+/* Expenses List */
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.expense-info .expense-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.expense-info .expense-category {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.expense-details {
+  text-align: right;
+}
+
+.expense-details .expense-amount {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.expense-details .expense-date {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* AI Budget Planner */
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-foreground);
+}
+
+.input-with-icon input {
+  padding-left: 2.25rem;
+  color: var(--foreground);
+}
+
+input,
+select {
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: rgba(31, 31, 31, 0.8);
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  color: var(--foreground);
+  backdrop-filter: blur(5px);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px rgba(217, 70, 239, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkbox-item label {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: var(--foreground);
+}
+
+/* Budget Plan */
+.budget-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.budget-section {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.budget-section h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+/* Future Goals */
+.future-goals {
+  margin-top: 1.5rem;
+}
+
+.future-goals h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.goal-card {
+  background-color: rgba(31, 31, 31, 0.8);
+  border-radius: var(--radius);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.goal-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.goal-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.goal-target,
+.goal-saved,
+.goal-progress {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.goal-estimate {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.5rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .budget-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .form-group:last-child {
+    grid-column: span 2;
+  }
+}
+

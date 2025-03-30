@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link active">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Shop</h1>
+        <div class="header-actions">
+          <div class="points-balance">
+            <i class="fa-solid fa-star"></i>
+            <span>1,250 Points</span>
+          </div>
+          <button class="btn btn-outline">
+            <i class="fa-solid fa-shopping-cart"></i>
+            <span class="cart-count">3</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <!-- Shop Banner -->
+        <div class="shop-banner animate-fade-in">
+          <div class="banner-content">
+            <h2>Exclusive Offers for FinWiz Users</h2>
+            <p>Use your points to unlock discounts and special offers from our partners</p>
+            <button class="btn btn-primary">Explore Deals</button>
+          </div>
+          <div class="banner-image">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+        </div>
+
+        <!-- Shop Categories -->
+        <div class="shop-categories animate-fade-in">
+          <div class="category-tabs">
+            <button class="category-tab active">All Categories</button>
+            <button class="category-tab">Financial Services</button>
+            <button class="category-tab">Education</button>
+            <button class="category-tab">Lifestyle</button>
+            <button class="category-tab">Technology</button>
+          </div>
+          <div class="category-filters">
+            <div class="search-box">
+              <i class="fa-solid fa-search"></i>
+              <input type="text" placeholder="Search products...">
+            </div>
+            <select class="sort-select">
+              <option>Sort by: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Points: Low to High</option>
+              <option>Points: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Featured Products -->
+        <div class="section-header animate-fade-in">
+          <h2>Featured Products</h2>
+          <p>Handpicked offers with exclusive discounts</p>
+        </div>
+
+        <div class="products-grid animate-fade-in">
+          <div class="product-card animate-pop-in" style="animation-delay: 0.1s;">
+            <div class="product-badge">Featured</div>
+            <div class="product-image">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="product-content">
+              <h3>Financial Planning Masterclass</h3>
+              <div class="product-description">
+                Comprehensive online course on personal finance management
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                  <span>4.5 (120)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹4,999</div>
+                  <div class="discounted-price">₹2,999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>500 points for 40% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.2s;">
+            <div class="product-badge">Best Seller</div>
+            <div class="product-image">
+              <i class="fa-solid fa-laptop"></i>
+            </div>
+            <div class="product-content">
+              <h3>Premium Budget Planner App</h3>
+              <div class="product-description">
+                1-year subscription to the premium version of our budget planner
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (250)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹1,999</div>
+                  <div class="discounted-price">₹999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>300 points for 50% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.3s;">
+            <div class="product-badge">New</div>
+            <div class="product-image">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="product-content">
+              <h3>Financial Advisor Consultation</h3>
+              <div class="product-description">
+                1-hour personal consultation with a certified financial advisor
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>4.0 (85)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹3,500</div>
+                  <div class="discounted-price">₹2,500</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>400 points for 30% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Offers -->
+        <div class="section-header animate-fade-in">
+          <h2>Special Offers</h2>
+          <p>Limited-time deals with extra savings</p>
+        </div>
+
+        <div class="offers-grid animate-fade-in">
+          <div class="offer-card animate-slide-in-left">
+            <div class="offer-content">
+              <h3>Tax Planning Bundle</h3>
+              <p>Get our tax planning ebook, calculator, and consultation at a special price</p>
+              <div class="offer-price">
+                <div class="original-price">₹5,999</div>
+                <div class="discounted-price">₹3,999</div>
+              </div>
+              <div class="offer-points">
+                <i class="fa-solid fa-star"></i>
+                <span>600 points for additional 10% off</span>
+              </div>
+              <div class="offer-timer">
+                <i class="fa-solid fa-clock"></i>
+                <span>Offer ends in: 2d 15h 30m</span>
+              </div>
+              <button class="btn btn-primary">View Offer</button>
+            </div>
+            <div class="offer-image">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+          </div>
+
+          <div class="offer-card animate-slide-in-right">
+            <div class="offer-content">
+              <h3>Investment Starter Pack</h3>
+              <p>Everything you need to start your investment journey with confidence</p>
+              <div class="offer-price">
+                <div class="original-price">₹7,999</div>
+                <div class="discounted-price">₹4,999</div>
+              </div>
+              <div class="offer-points">
+                <i class="fa-solid fa-star"></i>
+                <span>800 points for additional 15% off</span>
+              </div>
+              <div class="offer-timer">
+                <i class="fa-solid fa-clock"></i>
+                <span>Offer ends in: 5d 8h 45m</span>
+              </div>
+              <button class="btn btn-primary">View Offer</button>
+            </div>
+            <div class="offer-image">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Products -->
+        <div class="section-header animate-fade-in">
+          <h2>All Products</h2>
+          <p>Browse our complete collection of financial products and services</p>
+        </div>
+
+        <div class="products-grid animate-fade-in">
+          <div class="product-card animate-pop-in" style="animation-delay: 0.1s;">
+            <div class="product-image">
+              <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <div class="product-content">
+              <h3>Tax Filing Assistant</h3>
+              <div class="product-description">
+                Simplified tax filing with expert guidance and support
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>4.0 (95)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹2,499</div>
+                  <div class="discounted-price">₹1,999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>250 points for 20% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.2s;">
+            <div class="product-image">
+              <i class="fa-solid fa-shield-alt"></i>
+            </div>
+            <div class="product-content">
+              <h3>Identity Protection Plan</h3>
+              <div class="product-description">
+                Comprehensive protection against identity theft and fraud
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                  <span>4.5 (110)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹3,999</div>
+                  <div class="discounted-price">₹2,999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>350 points for 25% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.3s;">
+            <div class="product-image">
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <div class="product-content">
+              <h3>Savings Goal Tracker</h3>
+              <div class="product-description">
+                Smart tool to set, track, and achieve your savings goals
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.8 (175)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹1,499</div>
+                  <div class="discounted-price">₹999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>200 points for 33% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.4s;">
+            <div class="product-image">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="product-content">
+              <h3>Investment Fundamentals Course</h3>
+              <div class="product-description">
+                Learn the basics of investing with this beginner-friendly course
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>4.2 (88)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹2,999</div>
+                  <div class="discounted-price">₹1,799</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>300 points for 40% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.5s;">
+            <div class="product-image">
+              <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <div class="product-content">
+              <h3>Will & Estate Planning Kit</h3>
+              <div class="product-description">
+                Comprehensive toolkit for planning your estate and creating a will
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                  <span>4.6 (92)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹5,499</div>
+                  <div class="discounted-price">₹3,999</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>450 points for 27% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card animate-pop-in" style="animation-delay: 0.6s;">
+            <div class="product-image">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="product-content">
+              <h3>Retirement Planning Calculator</h3>
+              <div class="product-description">
+                Advanced tool to plan and optimize your retirement savings
+              </div>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>4.1 (75)</span>
+                </div>
+                <div class="product-price">
+                  <div class="original-price">₹1,999</div>
+                  <div class="discounted-price">₹1,499</div>
+                </div>
+              </div>
+              <div class="product-points">
+                <i class="fa-solid fa-star"></i>
+                <span>250 points for 25% off</span>
+              </div>
+              <button class="btn btn-primary btn-block">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination animate-fade-in">
+          <button class="pagination-btn disabled">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <span class="pagination-ellipsis">...</span>
+          <button class="pagination-btn">8</button>
+          <button class="pagination-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
+

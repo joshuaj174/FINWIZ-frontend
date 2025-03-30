@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link active">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Dashboard</h1>
+        <div class="header-actions">
+          <button class="icon-button">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="icon-button">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="stats-grid animate-fade-in">
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Total Balance</h3>
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="stat-content">
+              <p class="stat-value">$12,580.00</p>
+              <p class="stat-change positive">+2.5% from last month</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Monthly Spending</h3>
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="stat-content">
+              <p class="stat-value">$1,850.00</p>
+              <p class="stat-change negative">-4.1% from last month</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Investments</h3>
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="stat-content">
+              <p class="stat-value">$8,450.00</p>
+              <p class="stat-change positive">+5.2% from last month</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Budget Status</h3>
+              <i class="fa-solid fa-chart-bar"></i>
+            </div>
+            <div class="stat-content">
+              <p class="stat-value">75%</p>
+              <p class="stat-change">of monthly budget used</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="card quick-actions animate-slide-in-left">
+            <div class="card-header">
+              <h2>Quick Actions</h2>
+              <p>Access key features of your financial dashboard</p>
+            </div>
+            <div class="card-content">
+              <div class="quick-actions-grid">
+                <a href="budgeting.html" class="action-button">
+                  <i class="fa-solid fa-chart-bar"></i>
+                  Budgeting
+                </a>
+                <a href="ai-assistant.html" class="action-button">
+                  <i class="fa-solid fa-brain"></i>
+                  AI Assistant
+                </a>
+                <a href="transactions.html" class="action-button">
+                  <i class="fa-solid fa-credit-card"></i>
+                  Transactions
+                </a>
+                <a href="investments.html" class="action-button">
+                  <i class="fa-solid fa-chart-pie"></i>
+                  Investments
+                </a>
+                <a href="shop.html" class="action-button">
+                  <i class="fa-solid fa-shopping-bag"></i>
+                  Shop
+                </a>
+                <a href="wallet.html" class="action-button">
+                  <i class="fa-solid fa-wallet"></i>
+                  Wallet
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card budget-overview animate-slide-in-right">
+            <div class="card-header">
+              <h2>Monthly Budget Overview</h2>
+              <p>Your spending across categories</p>
+            </div>
+            <div class="card-content">
+              <div class="budget-categories">
+                <div class="budget-category">
+                  <div class="category-header">
+                    <span>Housing</span>
+                    <span>$800/$800</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                  </div>
+                </div>
+                <div class="budget-category">
+                  <div class="category-header">
+                    <span>Food</span>
+                    <span>$350/$400</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress blue" style="width: 87.5%;"></div>
+                  </div>
+                </div>
+                <div class="budget-category">
+                  <div class="category-header">
+                    <span>Transportation</span>
+                    <span>$200/$250</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress green" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="budget-category">
+                  <div class="category-header">
+                    <span>Entertainment</span>
+                    <span>$120/$150</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress yellow" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="budget-category">
+                  <div class="category-header">
+                    <span>Shopping</span>
+                    <span>$180/$200</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress red" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="budgeting.html" class="btn btn-outline">View Full Budget</a>
+            </div>
+          </div>
+
+          <div class="card community-highlights animate-slide-in-left">
+            <div class="card-header">
+              <h2>Community Highlights</h2>
+              <p>Recent discussions from the community</p>
+            </div>
+            <div class="card-content">
+              <div class="community-posts">
+                <div class="community-post">
+                  <h3>Best Credit Cards for Students</h3>
+                  <p>32 comments • 15 upvotes</p>
+                </div>
+                <div class="community-post">
+                  <h3>How to start investing with $500</h3>
+                  <p>48 comments • 27 upvotes</p>
+                </div>
+                <div class="community-post">
+                  <h3>Tips for first-time home buyers</h3>
+                  <p>19 comments • 12 upvotes</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="community.html" class="btn btn-outline">Join Discussions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="card recent-transactions animate-slide-in-left">
+            <div class="card-header">
+              <h2>Recent Transactions</h2>
+              <p>Your latest financial activities</p>
+            </div>
+            <div class="card-content">
+              <div class="transactions-list">
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon blue">
+                      <i class="fa-solid fa-shopping-bag"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <p class="transaction-name">Grocery Store</p>
+                      <p class="transaction-date">Today, 10:30 AM</p>
+                    </div>
+                  </div>
+                  <p class="transaction-amount negative">-$65.40</p>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon green">
+                      <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <p class="transaction-name">Salary Deposit</p>
+                      <p class="transaction-date">Yesterday, 9:00 AM</p>
+                    </div>
+                  </div>
+                  <p class="transaction-amount positive">+$2,500.00</p>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-info">
+                    <div class="transaction-icon yellow">
+                      <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <p class="transaction-name">Restaurant</p>
+                      <p class="transaction-date">Yesterday, 7:30 PM</p>
+                    </div>
+                  </div>
+                  <p class="transaction-amount negative">-$42.80</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="transactions.html" class="btn btn-outline">View All Transactions</a>
+            </div>
+          </div>
+
+          <div class="card ai-assistant animate-slide-in-right">
+            <div class="card-header">
+              <h2>AI Financial Assistant</h2>
+              <p>Ask any financial question</p>
+            </div>
+            <div class="card-content">
+              <div class="chat-container">
+                <div class="chat-message user">
+                  <p>How can I start investing with a small budget?</p>
+                </div>
+                <div class="chat-message assistant">
+                  <p>You can start investing with as little as $50 using micro-investing apps like Acorns or Stash. Consider index funds or ETFs for diversification with low fees. Consistently investing small amounts over time can lead to significant growth through compound interest.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="ai-assistant.html" class="btn btn-outline">
+                <i class="fa-solid fa-brain"></i>
+                Ask AI Assistant
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
+

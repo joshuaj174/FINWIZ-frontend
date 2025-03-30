@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  /* Custom styles for Settings Page */
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: rgba(31, 31, 31, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    margin-bottom: 20px;
+  }
+
+  .card-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 5px;
+  }
+
+  .card-header p {
+    font-size: 14px;
+    color: var(--muted-foreground);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .settings-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(31, 31, 31, 0.6);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    backdrop-filter: blur(5px);
+  }
+
+  .settings-item:hover {
+    background: rgba(31, 31, 31, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .setting-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--primary);
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  .setting-info {
+    flex-grow: 1;
+    margin-right: 15px;
+  }
+
+  .setting-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .setting-description {
+    font-size: 14px;
+    color: var(--muted-foreground);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .setting-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: var(--foreground);
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .setting-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+    outline: none;
+  }
+
+  /* Toggle Switch Styling */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: var(--primary);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(25px);
+  }
+
+  /* Small Buttons */
+  .btn-small {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .btn-small:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .settings-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .setting-icon {
+      margin-bottom: 10px;
+    }
+    
+    .setting-info {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+    
+    .setting-select,
+    .switch,
+    .btn-small {
+      align-self: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link active">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="#" class="sidebar-link" id="logoutBtn">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Settings</h1>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="icon-button">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="icon-button">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="settings-grid animate-fade-in">
+          <!-- General Settings -->
+          <div class="card general-settings animate-slide-in-left">
+            <div class="card-header">
+              <h2>General Settings</h2>
+              <p>Manage your account preferences</p>
+            </div>
+            <div class="card-content">
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-language"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Language</p>
+                  <p class="setting-description">Set your preferred language for the app.</p>
+                </div>
+                <select class="setting-select" id="languageSelect">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="fr">Français</option>
+                  <option value="de">Deutsch</option>
+                </select>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Dark Mode</p>
+                  <p class="setting-description">Enable dark mode for better visibility at night.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="darkModeToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Time Format</p>
+                  <p class="setting-description">Choose between 12-hour or 24-hour time format.</p>
+                </div>
+                <select class="setting-select" id="timeFormatSelect">
+                  <option value="12h">12-hour</option>
+                  <option value="24h">24-hour</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Settings -->
+          <div class="card notification-settings animate-slide-in-right">
+            <div class="card-header">
+              <h2>Notification Settings</h2>
+              <p>Control how you receive notifications</p>
+            </div>
+            <div class="card-content">
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Email Notifications</p>
+                  <p class="setting-description">Receive email updates about your account activity.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="emailNotificationsToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Push Notifications</p>
+                  <p class="setting-description">Get instant alerts on your mobile device.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="pushNotificationsToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Transaction Alerts</p>
+                  <p class="setting-description">Be notified of all financial transactions.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="transactionAlertsToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Settings -->
+          <div class="card security-settings animate-slide-in-left">
+            <div class="card-header">
+              <h2>Security Settings</h2>
+              <p>Enhance the security of your account</p>
+            </div>
+            <div class="card-content">
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Two-Factor Authentication</p>
+                  <p class="setting-description">Add an extra layer of security to your account.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="twoFactorAuthToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Password Reset</p>
+                  <p class="setting-description">Change your password regularly for better security.</p>
+                </div>
+                <button class="btn-small" id="resetPasswordBtn">
+                  <i class="fa-solid fa-lock"></i>
+                  Reset Password
+                </button>
+              </div>
+              <div class="settings-item">
+                <div class="setting-icon">
+                  <i class="fa-solid fa-exclamation-triangle"></i>
+                </div>
+                <div class="setting-info">
+                  <p class="setting-title">Account Alerts</p>
+                  <p class="setting-description">Receive notifications for suspicious activities.</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="accountAlertsToggle">
+                  <span class="slider round" aria-hidden="true"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>
+

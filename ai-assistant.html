@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Financial Assistant - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/ai-assistant.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link active">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="gamification.html" class="sidebar-link">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Gamification</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">AI Financial Assistant</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="clearChat">
+            <i class="fa-solid fa-trash"></i>
+            Clear Chat
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="chat-container animate-fade-in">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div id="loading" class="loading-indicator">Thinking...</div>
+          <div class="chat-input-container">
+            <form id="chatForm">
+              <div class="chat-input-wrapper">
+                <input 
+                  type="text" 
+                  id="message-input" 
+                  class="chat-input" 
+                  placeholder="Ask me anything about finance..." 
+                  autocomplete="off"
+                >
+                <button type="submit" class="chat-send-btn" id="send-button">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="suggested-questions animate-slide-in-up">
+          <h3>Suggested Questions</h3>
+          <div class="question-chips">
+            <button class="question-chip" data-question="How do I create a budget?">
+              How do I create a budget?
+            </button>
+            <button class="question-chip" data-question="What's the difference between stocks and bonds?">
+              What's the difference between stocks and bonds?
+            </button>
+            <button class="question-chip" data-question="How much should I save for retirement?">
+              How much should I save for retirement?
+            </button>
+            <button class="question-chip" data-question="What is compound interest?">
+              What is compound interest?
+            </button>
+            <button class="question-chip" data-question="How can I improve my credit score?">
+              How can I improve my credit score?
+            </button>
+          </div>
+        </div>
+
+        <div class="ai-features animate-fade-in">
+          <div class="features-grid">
+            <div class="feature-card animate-pop-in" style="animation-delay: 0.1s;">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>Financial Analysis</h3>
+              <p>Get detailed analysis of your financial situation and personalized recommendations.</p>
+            </div>
+            <div class="feature-card animate-pop-in" style="animation-delay: 0.2s;">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>Financial Education</h3>
+              <p>Learn about complex financial concepts explained in simple terms.</p>
+            </div>
+            <div class="feature-card animate-pop-in" style="animation-delay: 0.3s;">
+              <i class="fa-solid fa-calculator"></i>
+              <h3>Financial Calculations</h3>
+              <p>Calculate loan payments, investment returns, and more with AI assistance.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/ai-assistant.js"></script>
+</body>
+</html>
+

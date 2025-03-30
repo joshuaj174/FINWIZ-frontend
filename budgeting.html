@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgeting - FinWiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/budgeting.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span class="logo-text">FinWiz</span>
+        </div>
+        <button class="close-sidebar" id="closeSidebar">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <i class="fa-solid fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="budgeting.html" class="sidebar-link active">
+          <i class="fa-solid fa-chart-bar"></i>
+          <span>Budgeting</span>
+        </a>
+        <a href="ai-assistant.html" class="sidebar-link">
+          <i class="fa-solid fa-brain"></i>
+          <span>AI Assistant</span>
+        </a>
+        <a href="community.html" class="sidebar-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Community</span>
+        </a>
+        <a href="transactions.html" class="sidebar-link">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Transactions</span>
+        </a>
+        <a href="investments.html" class="sidebar-link">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Investments</span>
+        </a>
+        <a href="shop.html" class="sidebar-link">
+          <i class="fa-solid fa-shopping-bag"></i>
+          <span>Shop</span>
+        </a>
+        <a href="wallet.html" class="sidebar-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html" class="sidebar-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <i class="fa-solid fa-cog"></i>
+          <span>Settings</span>
+        </a>
+        <a href="index.html" class="sidebar-link">
+          <i class="fa-solid fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="dashboard-header">
+        <button class="toggle-sidebar" id="toggleSidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1 class="page-title">Budgeting</h1>
+        <div class="header-actions">
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus-circle"></i>
+            Add Expense
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="tabs animate-fade-in">
+          <div class="tab-header">
+            <button class="tab-btn active" data-tab="manual">
+              <i class="fa-solid fa-chart-bar"></i>
+              Manual Budgeting
+            </button>
+            <button class="tab-btn" data-tab="ai">
+              <i class="fa-solid fa-brain"></i>
+              AI-Driven Budgeting
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="manual">
+              <div class="card budget-overview animate-slide-in-left">
+                <div class="card-header">
+                  <h2>Monthly Budget Overview</h2>
+                  <p>Track your spending across categories</p>
+                </div>
+                <div class="card-content">
+                  <div class="budget-summary">
+                    <div class="budget-total">
+                      <div class="budget-item">
+                        <label>Total Budget</label>
+                        <span class="budget-value">$2,000.00</span>
+                      </div>
+                      <div class="budget-item">
+                        <label>Spent</label>
+                        <span class="budget-value">$1,500.00</span>
+                      </div>
+                      <div class="budget-item">
+                        <label>Remaining</label>
+                        <span class="budget-value positive">$500.00</span>
+                      </div>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                      </div>
+                      <p class="budget-note">75% of budget used</p>
+                    </div>
+                  </div>
+
+                  <div class="divider"></div>
+
+                  <div class="budget-categories-section">
+                    <div class="section-header">
+                      <h3>Categories</h3>
+                      <button class="btn btn-sm btn-outline">
+                        <i class="fa-solid fa-plus-circle"></i>
+                        Add Category
+                      </button>
+                    </div>
+
+                    <div class="budget-categories">
+                      <div class="budget-category">
+                        <div class="category-header">
+                          <label>Housing</label>
+                          <div class="category-info">
+                            <p class="category-amount">$800/$800</p>
+                            <p class="category-percentage">100% used</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress" style="width: 100%;"></div>
+                        </div>
+                      </div>
+
+                      <div class="budget-category">
+                        <div class="category-header">
+                          <label>Food</label>
+                          <div class="category-info">
+                            <p class="category-amount">$350/$400</p>
+                            <p class="category-percentage">87.5% used</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress blue" style="width: 87.5%;"></div>
+                        </div>
+                      </div>
+
+                      <div class="budget-category">
+                        <div class="category-header">
+                          <label>Transportation</label>
+                          <div class="category-info">
+                            <p class="category-amount">$200/$250</p>
+                            <p class="category-percentage">80% used</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress green" style="width: 80%;"></div>
+                        </div>
+                      </div>
+
+                      <div class="budget-category">
+                        <div class="category-header">
+                          <label>Entertainment</label>
+                          <div class="category-info">
+                            <p class="category-amount">$120/$150</p>
+                            <p class="category-percentage">80% used</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress yellow" style="width: 80%;"></div>
+                        </div>
+                      </div>
+
+                      <div class="budget-category">
+                        <div class="category-header">
+                          <label>Shopping</label>
+                          <div class="category-info">
+                            <p class="category-amount">$180/$200</p>
+                            <p class="category-percentage">90% used</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar">
+                          <div class="progress red" style="width: 90%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline">Edit Budget</button>
+                  <button class="btn btn-primary">Add Expense</button>
+                </div>
+              </div>
+
+              <div class="card recent-expenses animate-slide-in-right">
+                <div class="card-header">
+                  <h2>Recent Expenses</h2>
+                  <p>Your latest spending activities</p>
+                </div>
+                <div class="card-content">
+                  <div class="expenses-list">
+                    <div class="expense-item">
+                      <div class="expense-info">
+                        <p class="expense-name">Grocery Store</p>
+                        <p class="expense-category">Food</p>
+                      </div>
+                      <div class="expense-details">
+                        <p class="expense-amount">$65.40</p>
+                        <p class="expense-date">Today, 10:30 AM</p>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="expense-item">
+                      <div class="expense-info">
+                        <p class="expense-name">Restaurant</p>
+                        <p class="expense-category">Food</p>
+                      </div>
+                      <div class="expense-details">
+                        <p class="expense-amount">$42.80</p>
+                        <p class="expense-date">Yesterday, 7:30 PM</p>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="expense-item">
+                      <div class="expense-info">
+                        <p class="expense-name">Gas Station</p>
+                        <p class="expense-category">Transportation</p>
+                      </div>
+                      <div class="expense-details">
+                        <p class="expense-amount">$45.00</p>
+                        <p class="expense-date">2 days ago, 5:15 PM</p>
+                      </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="expense-item">
+                      <div class="expense-info">
+                        <p class="expense-name">Movie Theater</p>
+                        <p class="expense-category">Entertainment</p>
+                      </div>
+                      <div class="expense-details">
+                        <p class="expense-amount">$28.50</p>
+                        <p class="expense-date">3 days ago, 8:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline btn-block">View All Expenses</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="ai">
+              <div class="card ai-budget-planner animate-slide-in-left">
+                <div class="card-header">
+                  <h2>AI-Driven Budget Planner</h2>
+                  <p>Let our AI create a personalized budget plan based on your financial profile</p>
+                </div>
+                <div class="card-content">
+                  <form class="budget-form">
+                    <div class="form-group">
+                      <label for="income">Monthly Income</label>
+                      <div class="input-with-icon">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <input type="text" id="income" placeholder="0.00">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="occupation">Occupation</label>
+                      <select id="occupation">
+                        <option value="employed">Employed Full-Time</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="student">Student</option>
+                        <option value="retired">Retired</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="financial-knowledge">Financial Knowledge</label>
+                      <select id="financial-knowledge">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate" selected>Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="spending-habits">Spending Habits</label>
+                      <select id="spending-habits">
+                        <option value="frugal">Frugal</option>
+                        <option value="moderate" selected>Moderate</option>
+                        <option value="liberal">Liberal</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Financial Goals</label>
+                      <div class="checkbox-group">
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="goal-emergency">
+                          <label for="goal-emergency">Build emergency fund</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="goal-debt">
+                          <label for="goal-debt">Pay off debt</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="goal-save">
+                          <label for="goal-save">Save for large purchase</label>
+                        </div>
+                        <div class="checkbox-item">
+                          <input type="checkbox" id="goal-invest">
+                          <label for="goal-invest">Start investing</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-brain"></i>
+                    Generate AI Budget Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="card sample-budget-plan animate-slide-in-right">
+                <div class="card-header">
+                  <h2>Sample AI Budget Plan</h2>
+                  <p>Here's an example of what your personalized budget could look like</p>
+                </div>
+                <div class="card-content">
+                  <div class="budget-plan">
+                    <div class="budget-section">
+                      <h3>Needs (50%)</h3>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                      </div>
+                      <div class="budget-grid">
+                        <div>Housing: 30%</div>
+                        <div>Utilities: 5%</div>
+                        <div>Groceries: 10%</div>
+                        <div>Transportation: 5%</div>
+                      </div>
+                    </div>
+
+                    <div class="budget-section">
+                      <h3>Wants (30%)</h3>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div>
+                      </div>
+                      <div class="budget-grid">
+                        <div>Dining Out: 10%</div>
+                        <div>Entertainment: 5%</div>
+                        <div>Shopping: 10%</div>
+                        <div>Subscriptions: 5%</div>
+                      </div>
+                    </div>
+
+                    <div class="budget-section">
+                      <h3>Investments (20%)</h3>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 20%;"></div>
+                      </div>
+                      <div class="budget-grid">
+                        <div>Emergency Fund: 5%</div>
+                        <div>Retirement: 10%</div>
+                        <div>Other Savings: 5%</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="future-goals">
+                    <h3>Future Goals Integration</h3>
+                    <div class="goal-card">
+                      <div class="goal-info">
+                        <div>
+                          <p class="goal-name">New Laptop</p>
+                          <p class="goal-target">$1,200 goal</p>
+                        </div>
+                        <div>
+                          <p class="goal-saved">$600 saved</p>
+                          <p class="goal-progress">50% complete</p>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                      </div>
+                      <p class="goal-estimate">Estimated completion: 3 months at current savings rate</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline">Customize Plan</button>
+                  <button class="btn btn-primary">Apply This Budget</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/budgeting.js"></script>
+</body>
+</html>
+
